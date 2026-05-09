@@ -6,17 +6,7 @@ export const metadata: Metadata = {
 };
 
 const page = () => {
-	return (
-		<section className="grid h-[90dvh] place-items-center">
-			<div className="space-y-2 text-center">
-				<h1 className="text-5xl font-semibold">nextjs-frontend-template</h1>
-				<h2 className="text-3xl">
-					A production-ready Next.js starter for building modern, scalable
-					frontend
-				</h2>
-			</div>
-		</section>
-	);
+	return <section className="grid h-[90dvh] place-items-center"></section>;
 };
 
 export default page;
