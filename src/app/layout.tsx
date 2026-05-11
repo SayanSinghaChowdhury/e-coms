@@ -20,7 +20,7 @@ const RootLayout = ({ children }: Readonly<RootLayoutProps>) => {
 		<html
 			lang="en"
 			suppressHydrationWarning>
-			<body>
+			<body className="duration-[1.2s]">
 				<ThemeProvider
 					attribute={"class"}
 					defaultTheme="dark"

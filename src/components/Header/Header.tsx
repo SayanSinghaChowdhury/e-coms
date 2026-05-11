@@ -1,9 +1,11 @@
 "use client";
 
+import { HomeIcon } from "lucide-react";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import Menubar from "../Menubar";
 import HamburgerMenu from "./HamburgerMenu";
 
 const ThemeToggleButton = dynamic(() => import("../ThemeToggleButton"), {
@@ -31,7 +33,7 @@ const Header = () => {
 
 	return (
 		<header
-			className={`fixed top-0 right-0 left-0 z-50 backdrop-blur-md transition-all duration-300 ease-out ${
+			className={`fixed top-0 right-0 left-0 z-50 backdrop-blur-md transition-all duration-300 duration-[1.2s] ease-out ${
 				isScrolled
 					? "bg-background/80 border-border border-b shadow-sm"
 					: "border-b border-b-transparent bg-transparent shadow-none"
@@ -49,19 +51,23 @@ const Header = () => {
 						className="h-7 w-auto object-contain"
 					/>
 					<h1
-						className="text-xl font-bold tracking-tight"
+						className="text-xl font-bold tracking-tight text-yellow-400"
 						aria-label="App Name">
-						NEXT App
+						ECOMs
 					</h1>
 				</Link>
 
 				{/* Desktop Nav */}
+
 				<nav className="hidden items-center gap-6 md:flex">
 					<Link
 						href={"/"}
 						className="hover:text-primary focus-visible:text-primary text-sm font-medium focus-visible:outline-none">
-						Home
+						<HomeIcon />
 					</Link>
+
+					<Menubar />
+
 					<Link
 						href={"https://github.com/piyushsarkar-dev"}
 						target="_blank"
@@ -100,6 +106,7 @@ const Header = () => {
 							className="hover:text-primary focus-visible:text-primary text-lg font-medium focus-visible:outline-none">
 							Home
 						</Link>
+						<Menubar />
 						<Link
 							href={"https://github.com/piyushsarkar-dev"}
 							target="_blank"
