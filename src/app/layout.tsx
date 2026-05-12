@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import Header from "@/components/Header/Header";
 import ThemeProvider from "@/components/Providers/ThemeProvider";
 import type { Metadata } from "next";
@@ -25,9 +26,11 @@ const RootLayout = ({ children }: Readonly<RootLayoutProps>) => {
 					attribute={"class"}
 					defaultTheme="dark"
 					enableSystem={false}>
-					<Header />
-
-					<main className="mx-auto max-w-7xl px-6 py-3">{children}</main>
+					<main className="mx-auto max-w-7xl px-6 py-3">
+						<Header />
+						{children}
+						<Footer />
+					</main>
 				</ThemeProvider>
 			</body>
 		</html>
