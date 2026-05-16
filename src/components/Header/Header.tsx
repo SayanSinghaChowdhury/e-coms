@@ -69,7 +69,9 @@ const Header = () => {
 					<Menubar />
 
 					<Link
-						href={"https://github.com/piyushsarkar-dev"}
+						href={
+							"https://github.com/SayanSinghaChowdhury/Sayan-Singha-Chowdhury"
+						}
 						target="_blank"
 						rel="noopener noreferrer"
 						className="focus-visible:text-primary focus-visible:outline-none">
@@ -116,7 +118,9 @@ const Header = () => {
 						</Link>
 						<Menubar />
 						<Link
-							href={"https://github.com/piyushsarkar-dev"}
+							href={
+								"https://github.com/SayanSinghaChowdhury/Sayan-Singha-Chowdhury"
+							}
 							target="_blank"
 							rel="noopener noreferrer"
 							onClick={toggleMenu}
