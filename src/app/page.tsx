@@ -1,3 +1,4 @@
+import ProductList from "@/components/product/ProductList";
 import { Card, CardContent } from "@/components/shadcnui/card";
 import {
 	Carousel,
@@ -70,6 +71,8 @@ const page = () => {
 				<CarouselPrevious />
 				<CarouselNext />
 			</Carousel>
+
+			<ProductList />
 		</section>
 	);
 };
