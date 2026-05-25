@@ -3,7 +3,7 @@
 import { ProductsType } from "@/lib/typeOfProduct";
 
 const CardOfProduct = ({ product }: { product: ProductsType }) => {
-	return <div>Enter</div>;
+	return <div></div>;
 };
 
 export default CardOfProduct;

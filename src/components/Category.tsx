@@ -53,6 +53,7 @@ const Category = () => {
 			slug: "gloves",
 		},
 	];
+
 	return (
 		<div className="mb-4 grid grid-cols-2 gap-8 rounded-md bg-gray-100 p-2 text-sm sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 dark:text-yellow-400">
 			{categories.map((cData) => (

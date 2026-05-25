@@ -26,7 +26,7 @@ const RootLayout = ({ children }: Readonly<RootLayoutProps>) => {
 					attribute={"class"}
 					defaultTheme="dark"
 					enableSystem={false}>
-					<main className="mx-auto max-w-7xl px-6 py-3">
+					<main className="mx-auto max-w-7xl px-6 py-8">
 						<Header />
 						{children}
 						<Footer />
