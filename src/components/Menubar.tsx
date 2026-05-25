@@ -9,7 +9,7 @@ const Menubar = () => {
 			<input
 				type="text"
 				placeholder="Search"
-				className="rounded-sm bg-gray-300/40 p-1 font-sans font-semibold text-black shadow-md duration-500 hover:p-[4px] hover:shadow hover:shadow-amber-200"
+				className="rounded-sm bg-gray-300/40 p-1 font-sans font-semibold text-black shadow-md duration-500"
 			/>
 
 			<Link href={"/"}>

@@ -9,6 +9,7 @@ import {
 	ShoppingBasket,
 	Venus,
 } from "lucide-react";
+import { useRouter, useSearchParams } from "next/navigation";
 
 const Category = () => {
 	const categories = [
@@ -54,11 +55,26 @@ const Category = () => {
 		},
 	];
 
+	const clickCategory = useSearchParams();
+
+	// ==== raping---useSearchParams();
+
+	const onParams = clickCategory.get("click");
+
+	const selectCategory = useRouter();
+
+	const handleClick = (value: string | number) => {
+		selectCategory.push(`/?click=${value}`);
+	};
+
 	return (
-		<div className="mb-4 grid grid-cols-2 gap-8 rounded-md bg-gray-100 p-2 text-sm sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 dark:text-yellow-400">
+		<div className="bg-dark mb-4 grid cursor-pointer grid-cols-2 gap-8 rounded-md p-2 text-sm text-gray-400 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8">
 			{categories.map((cData) => (
 				<div
-					className="grid place-items-center"
+					onClick={() => {
+						handleClick(cData.slug);
+					}}
+					className={`grid place-items-center ${cData.slug === onParams ? "rounded-md bg-white text-black" : "text-gray-400"} `}
 					key={cData.name}>
 					{cData.icon}
 					{cData.name}

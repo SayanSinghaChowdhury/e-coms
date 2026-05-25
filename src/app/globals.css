@@ -124,6 +124,10 @@
 	}
 }
 
+.bg-dark {
+	background-color: #1d1f2c;
+}
+
 /* theme toggle button */
 .theme-switch {
 	--toggle-size: 10px; /* Scaled for navbar */
