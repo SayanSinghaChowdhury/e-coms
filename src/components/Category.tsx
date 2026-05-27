@@ -9,7 +9,7 @@ import {
 	ShoppingBasket,
 	Venus,
 } from "lucide-react";
-import { useRouter, useSearchParams } from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
 const Category = () => {
 	const categories = [
@@ -55,6 +55,8 @@ const Category = () => {
 		},
 	];
 
+	const pathName = usePathname();
+
 	const clickCategory = useSearchParams();
 
 	// ==== raping---useSearchParams();
@@ -64,7 +66,11 @@ const Category = () => {
 	const selectCategory = useRouter();
 
 	const handleClick = (value: string | number) => {
-		selectCategory.push(`/?click=${value}`);
+		const urlNew = new URLSearchParams(clickCategory);
+
+		urlNew.set("click", value || "all");
+
+		selectCategory.push(`${pathName}?${urlNew}`, { scroll: false });
 	};
 
 	return (

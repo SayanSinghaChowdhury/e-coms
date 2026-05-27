@@ -71,7 +71,6 @@ const page = () => {
 				<CarouselPrevious />
 				<CarouselNext />
 			</Carousel>
-
 			<ProductList />
 		</section>
 	);

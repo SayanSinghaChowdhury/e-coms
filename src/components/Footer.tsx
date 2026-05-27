@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Footer = () => {
 	return (
-		<footer className="bg-dark flex flex-col items-center justify-center gap-3 rounded-md p-5 md:flex md:flex-row lg:gap-20">
+		<footer className="bg-blue bg-dark flex flex-col items-center justify-center gap-3 rounded-md p-5 md:flex md:flex-row lg:gap-20">
 			{/* Frist Box */}
 			<div className="grid justify-center gap-2 text-center text-gray-400">
 				<Link
