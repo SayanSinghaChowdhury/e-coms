@@ -29,8 +29,8 @@ const RootLayout = ({ children }: Readonly<RootLayoutProps>) => {
 					<main className="mx-auto max-w-7xl px-6 py-8">
 						<Header />
 						{children}
-						<Footer />
 					</main>
+					<Footer />
 				</ThemeProvider>
 			</body>
 		</html>
